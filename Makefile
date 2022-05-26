@@ -16,13 +16,13 @@ bin/randomizeOrder: src/randomizeOrder.c
 	$(CC) $(CFLAGS) -o bin/randomizeOrder src/randomizeOrder.c
 
 bin/dictionary.so: bin/dictionary.o
-	$(CC) $(CFLAGS) -shared -o bin/dictionary.so src/dictionary.o
+	$(CC) $(CFLAGS) -shared -o bin/dictionary.so bin/dictionary.o
 
 bin/dictionary.o: src/dictionary.c
 	$(CC) $(CFLAGS) -c src/dictionary.c
 
 bin/fileAccess.so: bin/fileAccess.o
-	$(CC) $(CFLAGS) -shared -o bin/fileAccess.so src/fileAccess.o
+	$(CC) $(CFLAGS) -shared -o bin/fileAccess.so bin/fileAccess.o
 
 bin/fileAccess.o: src/fileAccess.c
 	$(CC) $(CFLAGS) -c src/fileAccess.c
