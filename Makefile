@@ -19,13 +19,13 @@ bin/dictionary.so: bin/dictionary.o
 	$(CC) $(CFLAGS) -shared -o bin/dictionary.so src/dictionary.o
 
 bin/dictionary.o: src/dictionary.c
-	$(CC) $(CFLAGS) -c bin/dictionary.c
+	$(CC) $(CFLAGS) -c src/dictionary.c
 
 bin/fileAccess.so: bin/fileAccess.o
 	$(CC) $(CFLAGS) -shared -o bin/fileAccess.so src/fileAccess.o
 
 bin/fileAccess.o: src/fileAccess.c
-	$(CC) $(CFLAGS) -c bin/fileAccess.c
+	$(CC) $(CFLAGS) -c src/fileAccess.c
 
 clean:
 	rm bin/testFileAccess bin/testDictionary bin/removeNames bin/randomizeOrder
