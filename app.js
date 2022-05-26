@@ -13,7 +13,7 @@ const path = require("path");
 // Important, pass in port as in `npm run dev 1234`, do not change
 const portNum = process.argv[2];
 
-var p = path.join(__dirname + "./bin/dictionary.dll");
+var p = path.join(__dirname + "/bin/dictionary.dll");
 console.log(p);
 let treeLib = ffi.Library(p, {
   checkWord: ["int", ["void*", "string", "string"]],
@@ -21,7 +21,7 @@ let treeLib = ffi.Library(p, {
   freeTree: ["void", ["void*"]],
 });
 
-p = path.join(__dirname + "./bin/fileAccess.dll");
+p = path.join(__dirname + "/bin/fileAccess.dll");
 console.log(p);
 let fileLib = ffi.Library(p, {
   getWordAtIndex: ["string", ["int", "string"]],
