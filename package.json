@@ -1,0 +1,17 @@
+{
+  "name": "a3",
+  "version": "1.0.1",
+  "description": "JoshWord",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ffi-napi": "^3.1.0",
+    "http": "0.0.1-security",
+    "nodemon": "^2.0.5"
+  }
+}

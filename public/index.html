@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link href="reset.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body class="light">
+    <header id="menu">
+      <!-- <div id="info" class="light">i</div> -->
+      <div id="dark-mode" class="light">
+        <button id="dark-mode-button" class="light">
+      </div>
+      <input id="date-picker" class="light" type="date" min="2022-01-01"/>
+    </header>
+    <div id="word-box">
+      <div id="upper-words" class="word-box"></div>
+      <div id="upper-gradient" class="light"></div>
+      <!-- <label id="current-word" ><span class="blinking-cursor">|</span></label> -->
+      <form autocomplete="off">
+        <input id="current-word" class="light" type="text" placeholder="Enter a guess">
+      </form>
+      <div id="lower-words" class="word-box"></div>
+      <div id="lower-gradient" class="light" ></div>
+    </div>
+
+    <div id="popup" class="hidden light">
+      <div id="popup-info-container">
+        <ul>
+          <li>Word difficulty</li>
+          <li>Record past results</li>
+          <li>Display timer</li>
+        </ul>
+      </div>
+      <div id="exit-button-container">
+        <div id="exit-button" class="light" tabindex="0">
+          <div id="exit-button-text" class="light">
+            +
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="result-popup" class="hidden">
+      <h2 id="result-title"><strong>Victory!</strong></h2>
+      <p id="result-info">You successfully guessed the word <strong id="result-answer">temp</strong> in a total of <strong id="result-guesses">100</strong> guesses</p>
+      <div id="result-exit-button-container">
+        <div id="result-exit-button" tabindex="0">
+          <div id="result-exit-button-text">
+            +
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+  <script src="index.js"></script>
+</html>
