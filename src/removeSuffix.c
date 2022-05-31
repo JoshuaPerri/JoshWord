@@ -17,7 +17,7 @@ int hasSuffix(char *word, int length) {
   }
 
   // check 'ing'
-  if (word[length] == 'G' && word[length] == 'N'  && word[length] == 'I') {
+  if (word[length] == 'G' && word[length-1] == 'N'  && word[length-2] == 'I') {
     return(1);
   }
 

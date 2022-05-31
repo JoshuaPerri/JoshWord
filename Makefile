@@ -12,6 +12,9 @@ bin/testDictionary: src/dictionary.c src/testDictionary.c
 bin/removeNames: src/removeNames.c
 	$(CC) $(CFLAGS) -o bin/removeNames src/removeNames.c
 
+bin/removeSuffix: src/removeSuffix.c
+	$(CC) $(CFLAGS) -o bin/removeSuffix src/removeSuffix.c
+
 bin/randomizeOrder: src/randomizeOrder.c
 	$(CC) $(CFLAGS) -o bin/randomizeOrder src/randomizeOrder.c
 
