@@ -171,6 +171,8 @@ $(document).ready(() => {
   $("#date-picker").change((e) => {
     $("#upper-words").empty();
     $("#lower-words").empty();
+    $("#current-word").val("");
+    $("#current-word").prop("disabled", false);
   });
 
   $("#exit-button").change((e) => {
