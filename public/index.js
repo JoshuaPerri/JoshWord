@@ -179,8 +179,15 @@ $(document).ready(() => {
     $("#exit-button").toggleClass("shown");
   });
 
+  var waiting = false;
   $("form").submit((e) => {
     e.preventDefault();
+
+    if (waiting) {
+      return;
+    }
+    waiting = true;
+
     var answer = $("#current-word").val();
     var date = $("#date-picker").val();
 
@@ -217,10 +224,12 @@ $(document).ready(() => {
             $("#current-word").val("");
             break;
         }
+        waiting = false;
       },
       fail: function (error) {
         console.log(error);
         console.log("Did not successfully check");
+        waiting = false;
       },
     });
   });
