@@ -57,6 +57,7 @@ function toggleDarkMode() {
   $("#popup").toggleClass("light dark");
   $("#current-word").toggleClass("light dark");
   $("#date-picker").toggleClass("dark");
+  $("#giveup-button").toggleClass("dark");
 
   $("#popup").toggleClass("light dark");
   $("#exit-button-text").toggleClass("light dark");
@@ -154,8 +155,26 @@ function checkDate(pickedDate) {
 }
 
 function victory(answer) {
-  $("#result-answer").text(answer);
+  $("#result-title").text("Victory!");
+
+  $("#result-answer-success").text(answer);
   $("#result-guesses").text(id + 1);
+
+  $("#result-success").show();
+  $("#result-fail").hide();
+
+  $("#result-popup").toggleClass("hidden shown");
+  $("#current-word").prop("disabled", true);
+}
+
+function fail(answer) {
+  $("#result-title").text("Too bad!");
+
+  $("#result-answer-fail").text(answer);
+  $("#result-guesses").text(id + 1);
+
+  $("#result-success").hide();
+  $("#result-fail").show();
 
   $("#result-popup").toggleClass("hidden shown");
   $("#current-word").prop("disabled", true);
@@ -230,6 +249,28 @@ $(document).ready(() => {
         console.log(error);
         console.log("Did not successfully check");
         waiting = false;
+      },
+    });
+  });
+
+  $("#giveup-button").click((e) => {
+    e.preventDefault();
+    var date = $("#date-picker").val();
+    console.log("giveup");
+
+    jQuery.ajax({
+      type: "get",
+      dataType: "json",
+      url: "/giveup",
+      data: {
+        date: date,
+      },
+      success: function (data) {
+        $("#current-word").val(data.word);
+        fail(data.word);
+      },
+      fail: function (error) {
+        console.log(error);
       },
     });
   });

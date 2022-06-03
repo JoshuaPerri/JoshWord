@@ -13,6 +13,7 @@
         <button id="dark-mode-button" class="light">
       </div>
       <input id="date-picker" class="light" type="date" min="2022-01-01"/>
+      <button id="giveup-button">Give up</button>
     </header>
     <div id="word-box">
       <div id="upper-words" class="word-box"></div>
@@ -44,7 +45,8 @@
 
     <div id="result-popup" class="hidden">
       <h2 id="result-title"><strong>Victory!</strong></h2>
-      <p id="result-info">You successfully guessed the word <strong id="result-answer">temp</strong> in a total of <strong id="result-guesses">100</strong> guesses</p>
+      <p id="result-success">You successfully guessed the word <strong id="result-answer-success">temp</strong> after a total of <strong id="result-guesses">100</strong> guesses</p>
+      <p id="result-fail">You were unable to guess the word <strong id="result-answer-fail">temp</strong></p>
       <div id="result-exit-button-container">
         <div id="result-exit-button" tabindex="0">
           <div id="result-exit-button-text">

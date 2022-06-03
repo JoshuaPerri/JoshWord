@@ -153,6 +153,29 @@ body.light {
   filter: opacity(60%);
 }
 
+#giveup-button {
+  height: 30px;
+
+  margin: 10px;
+  padding: 0 10px 0 10px;
+
+  font-weight: bold;
+  font-size: 20px;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 5px;
+
+  color: rgb(109, 109, 109);
+  background-color: rgb(235, 235, 235);
+}
+
+#giveup-button.dark {
+  color: rgb(149, 149, 149);
+  background-color: rgb(59, 59, 59);
+}
+
 #word-box {
   width: 80vw;
   height: 90vh;
@@ -438,12 +461,21 @@ body.light {
   margin-bottom: 20px;
 }
 
-#result-info {
+#result-success {
   font-size: 20px;
   text-align: center;
 }
 
-#result-answer {
+#result-fail {
+  font-size: 20px;
+  text-align: center;
+}
+
+#result-answer-success {
+  color: rgb(5, 165, 165);
+}
+
+#result-answer-fail {
   color: rgb(5, 165, 165);
 }
 
