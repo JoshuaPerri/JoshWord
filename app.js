@@ -150,7 +150,7 @@ app.get("/check", function (req, res) {
     });
   } else {
     var index = convertDate(date);
-    var p = path.join(__dirname + "./text/words-medium-random.txt");
+    var p = path.join(__dirname + "/text/words-medium-random.txt");
     var ans = fileLib.getWordAtIndex(index, p);
 
     if (ans == null) {
@@ -180,7 +180,7 @@ app.get("/giveup", function (req, res) {
     });
   } else {
     var index = convertDate(date);
-    var p = path.join(__dirname + "./text/words-medium-random.txt");
+    var p = path.join(__dirname + "/text/words-medium-random.txt");
     var ans = fileLib.getWordAtIndex(index, p);
 
     res.send({
