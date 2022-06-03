@@ -1,10 +1,11 @@
 {
-  "name": "a3",
+  "name": "joshword",
   "version": "1.0.1",
   "description": "JoshWord",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "npm run dev 8080"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "ffi-napi": "^3.1.0",
     "http": "0.0.1-security",
     "nodemon": "^2.0.5"
+  },
+  "engines": {
+    "node": "14.18.0"
   }
 }
